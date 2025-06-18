@@ -1,0 +1,38 @@
+x_range:
+  start: 0.0
+  end: 5.0
+  steps: 10
+
+y_range:
+  start: 0.0
+  end: 5.0
+  steps: 10
+
+max_retries: 3
+
+stage_fail_rate: 0.5      # 50 % failure rate for stage movement
+sensor_fail_rate: 0.3     # 30 % failure rate for sensor measurement
+
+rolling_avg_window: 3
+
+smoothing: fast_mean  # Options: 'mean', 'fast_mean'
+
+peak_threshold: 0.8   # Only for multiple peak detection
+
+logging:
+  level: INFO
+  file: scan.log
+
+output:
+  csv_file: out/scan_results.csv
+  heatmap_file: out/heatmap.png
+
+# x_range/y_range creates a 10×10 grid (100 points) for the scan.
+# 10 steps gives a moderate resolution (100 points total), balancing scan detail and speed.
+# np.linspace(start, end, steps) gives evenly spaced values including both endpoints.
+# max_retries to 3 tolerates transient errors but avoids wasting time on persistent failures.
+# if all retries fail, the point is skipped, and NaN is recorded in the data for traceability.
+# A 3×3 rolling average window smooths out noise but preserves features. Larger windows would smooth more but could blur sharp peaks.
+# fast_mean for smoothing is faster for larger arrays, use vectorized operations (scipy.ndimage.uniform_filter) for efficiency.
+# peak_threshold: 0.8 means only local maxima above 0.8 are considered significant, reducing false positives from noise.
+# CSV is for quantitative analysis; heatmap is for quick visual inspection of scan results

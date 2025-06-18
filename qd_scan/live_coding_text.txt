@@ -1,0 +1,5 @@
+0.10 | Temp | 23.50
+.15 | Press | 1.02
+BAD LINE – skip me
+0.20 | Temp | 23.7
+0.25 | Humidity | 45.1
