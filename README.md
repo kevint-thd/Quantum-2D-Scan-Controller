@@ -1,6 +1,6 @@
 # Quantum-2D-Scan-Controller
 
-# QuantumDiamonds 2D Scan Controller - Project done by myself(Main Author , while preparing for QuantumDiamonds interview) 
+# QuantumDiamonds 2D Scan Controller -(credits Main Single Author) 
 'More information available below and PowerPoint presentation' attached. Thank you
 
 ## Overview
