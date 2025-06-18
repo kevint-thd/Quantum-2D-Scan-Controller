@@ -1,6 +1,6 @@
 # Quantum-2D-Scan-Controller
 
-# QuantumDiamonds 2D Scan Controller -(credits Main Single Author) 
+# QuantumDiamonds 2D Scan Controller - Quantumsensor, Quantum Diamonds, NV Center
 'More information available below and PowerPoint presentation' attached. Thank you
 
 ## Overview
